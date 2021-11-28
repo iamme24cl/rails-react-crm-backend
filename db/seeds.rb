@@ -4,6 +4,7 @@ class CreateFromCSV
 
   def self.create_prospect_and_companies(row)
     prospect = Prospect.create(first_name: row["first_name"], last_name: row["last_name"], email: row["email"], stage: row["stage"].downcase)
+    prospect.phone = row["phone"] if row["phone"]
     company = Company.find_or_create_by(name: row["company"].downcase) if row["company"]
     prospect.company = company if company
     prospect.save
