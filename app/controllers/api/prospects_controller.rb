@@ -30,7 +30,8 @@ class Api::ProspectsController < ApplicationController
     @prospect.update(
       first_name: prospect_params[:first_name],
       last_name: prospect_params[:last_name],
-      email: prospect_params[:email]
+      email: prospect_params[:email],
+      stage: prospect_params[:stage]
     )
     @prospect.company = @company if @company
 
@@ -53,7 +54,7 @@ class Api::ProspectsController < ApplicationController
 
   def prospect_params
     params.require(:prospect).permit(
-      :first_name, :last_name, :email, :phone, :company_id, :company_name)
+      :first_name, :last_name, :email, :phone, :stage, :company_id, :company_name)
   end
 
   def find_prospect
