@@ -42,6 +42,11 @@ class Api::ProspectsController < ApplicationController
   end
 
   def destroy
+    prospect_id = @prospect.id
+    name = "#{@prospect.first_name} #{@prospect.last_name}"
+    @prospect.destroy
+
+    render json: { message: "Deleted prospect #{name} with id #{prospect_id}"}, status: :accepted
   end
 
   private
