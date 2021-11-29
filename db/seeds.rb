@@ -23,3 +23,5 @@ CSV.foreach(filename, headers: true) do |row|
 end
 
 puts "Imported #{counter} prospects"
+
+User.create(email: "demo@user.com", password: "demodemo123")
