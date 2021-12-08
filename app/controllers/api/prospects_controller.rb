@@ -6,6 +6,7 @@ class Api::ProspectsController < ApplicationController
     @prospects = Prospect.all.order created_at: :desc
     render json: @prospects
   end
+  cache_method :index
 
   def show
     render json: @prospect
@@ -15,7 +16,8 @@ class Api::ProspectsController < ApplicationController
     prospect = Prospect.new(
       first_name: prospect_params[:first_name],
       last_name: prospect_params[:last_name],
-      email: prospect_params[:email]
+      email: prospect_params[:email],
+      phone: prospect_params[:phone]
     )
     prospect.company = @company if @company
 
@@ -31,6 +33,7 @@ class Api::ProspectsController < ApplicationController
       first_name: prospect_params[:first_name],
       last_name: prospect_params[:last_name],
       email: prospect_params[:email],
+      phone: prospect_params[:phone],
       stage: prospect_params[:stage]
     )
     @prospect.company = @company if @company
@@ -38,7 +41,7 @@ class Api::ProspectsController < ApplicationController
     if @prospect.save
       render json: @prospect, status: :accepted
     else
-      render json: { errors: @prospect.errors.full_messages }, status: :unprocessible_entity
+      render json: { errors: @prospect.errors.full_messages }
     end
   end
 

@@ -2,9 +2,10 @@ class Api::CompaniesController < ApplicationController
   before_action :find_company, only: [:update, :destroy]
 
   def index
-    @companies = Company.all.order created_at: :desc
+    @companies = Company.all.order name: :asc 
     render json: @companies
   end
+  cache_method :index
 
   def create
     company = Company.new(company_params)
