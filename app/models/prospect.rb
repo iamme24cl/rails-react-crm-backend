@@ -4,4 +4,9 @@ class Prospect < ApplicationRecord
   validates :stage, inclusion: { in: %w(lead contacted diligence closed rejected),
     message: "%{value} is not a valid stage" }
   belongs_to :company, optional: true
+  before_save :normalize_attribute
+
+  def normalize_attribute
+    self.email = self.email.downcase
+  end
 end

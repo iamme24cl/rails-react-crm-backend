@@ -1,4 +1,3 @@
-
 module SessionAuthenticatable
   extend ActiveSupport::Concern
  
