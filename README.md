@@ -1,24 +1,39 @@
-# README
+# crm-sales-funnel
+> This application is a CRM sales funnel.
+> ## General Information
+- Create, update and delete Prospects.
+- Create, update and delete Prospects.
+- Move prospects between different stages.
+- User is able to filter prospects by first name, last name or both.
+- User is able to filter prospects by stage.
+- User is able to filter companies by name.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is the backend end. Here is the link to the front end https://github.com/iamme24cl/vc-labs-crm-front-end
 
-Things you may want to cover:
+> Live demo hosted on heroku [_here_](). 
+> Demo video describing the features of the application is hosted [_here_]().
 
-* Ruby version
+## Table of Contents
+* [Technologies Used](#technologies-used)
+* [Usage](#usage)
+* [Contact](#contact)
 
-* System dependencies
+## Technologies Used
+### Backend 
+* Ruby on Rails
+* PostgreSQL
+### Frontend
+* React
+* Redux
+* Tailwinds CSS
 
-* Configuration
+## Usage
+* Clone this backend repository to your machine 
+* Run `bundle` to install all gems listed in the gemfile
+* Run `rails db:create && db:migrate && db:seed` to create and migrate the database and seed data (If you are on a windows machine, you will need to make sure your PostgreSQL server running. You can easily manage this in the PGAdmin desktop application).
+* Run `rails s` to run the server
+* Clone this front-end repo https://github.com/iamme24cl/vc-labs-crm-front-end and run `npm install && npm start` to install all dependecies listed in the package.json file and start the server and run the application in the browser.
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Contact
+Created by [@iamme24cl](https://github.com/iamme24cl) 
