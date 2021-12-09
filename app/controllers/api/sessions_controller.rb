@@ -1,8 +1,6 @@
 class Api::SessionsController < ApplicationController
-  include SessionAuthenticatable
-
   # Require session key authentication
-  prepend_before_action :authenticate_with_session_key!, only: %i[check_if_logged_in destroy]
+  skip_before_action :authenticate_with_session_key!, only: [:login]
 
   def check_if_logged_in
     user = User.find_by(id: current_bearer.id)
