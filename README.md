@@ -32,7 +32,7 @@
 * Run `bundle` to install all gems listed in the gemfile
 * Run `rails db:create && db:migrate && db:seed` to create and migrate the database and seed data (If you are on a windows machine, you will need to make sure your PostgreSQL server running. You can easily manage this in the PGAdmin desktop application).
 * Run `rails s` to run the server
-* Clone this front-end repo https://github.com/iamme24cl/vc-labs-crm-front-end and run `npm install && npm start` to install all dependecies listed in the package.json file and start the server and run the application in the browser.
+* Clone this front-end repo https://github.com/iamme24cl/rails-react-crm-front-end and run `npm install && npm start` to install all dependecies listed in the package.json file and start the server and run the application in the browser.
 
 
 ## Contact
