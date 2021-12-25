@@ -14,7 +14,7 @@ class CreateFromCSV
 
 end
 
-filename  =  File.join Rails.root, 'db/data/crm_data.csv'
+filename  =  File.join Rails.root, 'db/data/user-data.csv'
 counter = 0
 
 CSV.foreach(filename, headers: true) do |row|
