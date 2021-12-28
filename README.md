@@ -11,7 +11,7 @@
 > This is the backend end. Here is the link to the front end https://github.com/iamme24cl/rails-react-crm-front-end
 
 > Live demo hosted [_here_](https://rails-react-crm.netlify.app/). 
-> Demo video describing the features of the application is hosted [_here_]().
+> Demo video describing the features of the application is hosted [_here_](https://www.loom.com/share/25748eab68cd44a59f5422ab1fc85150?sharedAppSource=personal_library).
 
 ## Table of Contents
 * [Technologies Used](#technologies-used)
